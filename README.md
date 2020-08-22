@@ -10,7 +10,7 @@ This application is a simple Flask API and uses `kubernetes/base` and `gcp/api` 
 * Cloud Monitoring UptimeCheck
 
 `build/app.cue` is the application config to declare which Design Pattern to use.
-The actual Design Patterns are placed in https://github.com/j-maxi/designpattern-as-code.
+The actual Design Patterns are placed in https://github.com/nttcom/designpattern-as-code-demo.
 In this demo code, we load `build/app.cue` to resolve Design Patterns and generate a Tekton Pipeline configuration.
 The Pipeline will take care of deploying this application including generating Kubernetes and GCP Manifest.
 
@@ -67,14 +67,14 @@ rm key.json
 Prepare Design Patterns.
 
 ```bash
-git clone https://github.com/j-maxi/designpattern-as-code designpatterns
+git clone https://github.com/designpattern-as-code-demo designpatterns
 cd designpatterns
 ```
 
 Generate Tekton Pipeline.
 
 ```bash
-./generateTektonPipeline.sh > pipeline.yaml
+./tools/generateTektonPipeline.sh > pipeline.yaml
 kubectl -n kubecon-demo apply -f pipeline.yaml
 ```
 

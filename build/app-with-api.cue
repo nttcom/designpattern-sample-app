@@ -7,10 +7,10 @@ import (
 // global parameters
 globalParams: {
 	appName:    "kubecon-demo-app"
-	repository: "https://github.com/j-maxi/simple-app"
+	repository: "https://github.com/nttcom/designpattern-sample-app
 	revision:   string @tag("revision")
 	designpattern: {
-		repository: "https://github.com/j-maxi/designpattern-as-code"
+		repository: "https://github.com/nttcom/designpattern-as-code-demo
 		revision:   string @tag("designpatternRevision")
 	}
 	gcp: {
